@@ -1,0 +1,21 @@
+<ion-popover-view class="fit">
+    <ion-content scroll="false">
+        <div class="list sort-menu">
+            <div class="item" ng-click="sortBy('dateOrder')">
+                Due Date
+            </div>
+            <div class="item" ng-click="sortBy('zipcode')">
+                Zipcode (Nearest)
+            </div>
+            <div class="item" ng-click="sortBy('zipcode')">
+                Zipcode (Farthest)
+            </div>
+            <div class="item" ng-click="sortBy('facilityName')">
+                Provider Name (A-Z)
+            </div>
+            <div class="item" ng-click="sortBy('facilityName')">
+                Provider Name (Z-A)
+            </div>
+        </div>
+    </ion-content>
+</ion-popover-view>

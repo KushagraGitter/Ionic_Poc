@@ -1,0 +1,127 @@
+.providerFacility {
+	margin-top: 10%;
+}
+
+.providerSummaryTitle {
+	font-size: $font-size__header-title;
+	color: $brand-black;
+	margin-bottom: 9px;
+}
+
+.providerSummaryLabel {
+	font-family: $font-family__base;
+	font-size: $font-size__normal;
+	color: $brand-brownish-grey;
+	margin-bottom: 2px;
+	line-height: 1.38;
+	text-align: left;
+}
+
+.providerSummaryLabelData {
+	font-family: $font-family__base;
+	font-size: $font-size__normal;
+	font-weight: 600;
+	line-height: 1.38;
+	text-align: left;
+	color: $brand-black;
+	padding-left: inherit;
+  }
+
+.my-providerSummary {
+  width: 100%;
+  height: 30px; 
+  object-fit: contain; 
+  font-family: $font-family__base; 
+  font-size: $font-size__header-title; 
+  font-weight: $font-weight__light; 
+  line-height: 1; 
+  text-align: left; 
+  color: $brand-brownish-grey;
+}
+
+.providerSummaryLicence {
+	margin-bottom :10px;
+}
+
+.provider-list-item {
+	padding-top: 0;
+	padding-left: 20px;
+	font-style: $font-family__base;
+}
+.provider-list-item  p:nth-last-child(1) {
+	font-weight: 600;
+	color: $brand-ocean-blue;
+}
+
+.provider-summary-tab {
+	.tab-nav { 
+		  margin-top: 140px !important;;
+		  background: none;
+      @extend %main-background;
+			padding-left: 26px;
+			a:nth-last-child(3) {
+				margin-left: 0px;
+				border-bottom: none;
+				color: $brand-black;
+			}
+			 a:nth-last-child(2){
+				color: $brand-black;
+			}
+			 a:nth-last-child(1) {
+				color: $brand-black;
+			}
+		}
+	width:75%;
+	background: transparent;
+	border-bottom-color: $brand-pure-white;
+	border-bottom-style: solid;
+}
+
+.providerSummary-inspection-layout  {
+	margin-top: 150px;
+  margin-right: 25%;
+  padding-left: 22px;
+  }
+  
+  .list-header  {
+	background: transparent;
+  }
+  
+  .completed-card {
+	min-height: 153px !important;
+	margin-top: 15px !important;
+  }
+  
+  .ongoing-card {
+	min-height: 86px !important;
+	margin-top: 15px !important;
+  }
+  
+  .completed-button{
+	text-align: right;
+  }
+  
+  .card-second {
+	min-width: 50%;
+	padding-right: 40px;
+  }
+
+  .inspection-page {
+  background: transparent !important;
+  } 
+
+  .badges {
+    width: 15px;
+    height: 15px;
+    background: $brand-azure;
+    color: $brand-pure-white;
+    display: inline-block;
+    text-align: center;
+    font-family: $font-family__base;
+	}
+	
+	.inspection-button {
+			margin-top: 25px;
+	}
+
+	

@@ -1,0 +1,13 @@
+.providerListContent {
+	margin-top: 100px;
+}
+
+.provider-list-item {
+	padding-top: 0;
+	padding-left: 20px;
+}
+
+.provider-list-item  p:nth-last-child(1) {
+	font-weight: $font-weight__semi-bold;
+	color: $brand-ocean-blue;
+}

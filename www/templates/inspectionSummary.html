@@ -1,0 +1,33 @@
+<ion-view class="inspection-summary">
+	<ion-nav-bar bar-primary row>
+		<ion-nav-back-button class="button-clear positive">
+			<i class="ion-arrow-left-c positive"></i> Cancel
+		</ion-nav-back-button>
+		<div class="bar bar-header inspection-summary__title">
+			<div>
+				{{vm.inspectionRecord.accountInformation[0].Name}}
+				<span class="anticons triangle-arrow-right inspection-summary__arrow-icon"></span>
+				<span class="inspection-summary__title_end">{{vm.inspectionRecord.Type_of_Case__c}}</span>
+			</div>
+			<div class="row inspection-summary__subtitle">
+				<span class="col-10">Due: {{dueDate || 'Unknown'}}</span>
+				<span class="col-10" ng-hide="!vm.inspectionRecord.OEC_InitialSeverityNumber__c">Severity: {{vm.inspectionRecord.OEC_InitialSeverityNumber__c}}</span>
+			</div>
+			<div class="row inspection-summary__subtitle">
+				<span class="col-10">CN: {{vm.inspectionRecord.OEC_CaseNumber__c || 'Unknown'}}</span>
+				<span class="col-10">Service type: {{vm.inspectionRecord.accountInformation[0].Service_Type__c || 'Unknown'}}</span>
+			</div>
+		</div>
+		<div class="inspection-summary__header-right">
+			<span class="material-icons page-right inspection-summary__header-icon" ng-click="openNarratives()"><span class="inspection-summary__header-icon-text">Narratives</span></span>
+			<span class="material-icons greek-building inspection-summary__header-icon" ng-click="openClassrooms()"><span class="inspection-summary__header-icon-text">Classrooms</span></span>
+			<button class="button button-outline button-positive material-icons checkmark inspection-summary__header-icon inspection-summary__roi-button" ng-click="buildRoi()"><span class="inspection-summary__roi-button_text">BUILD ROI</span></button>
+		</div>
+		<div class="inspection-summary__search-bar">
+
+		</div>
+	</ion-nav-bar>
+	<ion-content class="inspection-summary__content">
+	</ion-content>
+</ion-view>
+

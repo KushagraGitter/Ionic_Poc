@@ -1,0 +1,707 @@
+// Import SCSS for specific pages
+@import "./pages/dashboard";
+@import "./pages/inspectionSummary";
+@import "./pages/inspectionNarratives";
+@import "./pages/providerDirectory";
+@import "./pages/providerSummary";
+
+//  A P P    S T A R T    P A G E
+#start-page {
+	height: 4000px; // needed to display whilst Ionic is initialising
+}
+
+#start-page .card {
+	box-shadow: none;
+	background-color: transparent;
+}
+
+#start-page .card .item {
+	border: 0;
+	background-color: transparent;
+}
+
+a.item-content:hover {
+	background-color: $item-divider-bg;
+}
+
+.card {
+	box-shadow: 0 1px 1px $button-light-border;
+}
+
+a.disabled {
+	pointer-events: none;
+	cursor: default;
+	color: grey;
+}
+
+.show-record-modal {
+	width: 60% !important;
+	height: 100% !important;
+	top: 0 !important;
+	left: 40% !important;
+}
+
+// Setting background for content
+.scroll-content {
+	@extend %main-background;
+}
+
+.oec-ion-view-header {
+	@extend %main-background;
+}
+
+// Classes for Side Menu styling
+.side-menu-class {
+	margin-top: 48px;
+}
+
+.side-menu-class div {
+	height: 40px;
+	width: 48px;
+	text-align: center;
+}
+
+.side-menu-class div a {
+	color: black;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.card-div {
+	padding: 0 40px 20px 20px;
+	margin-top: 15px;
+	width: 100%;
+	min-height: 179px;
+	opacity: 0.9;
+	border-radius: 5px;
+	background-color: $brand-pure-white;
+	box-shadow: 0 0 4px 0 rgba(163, 163, 163, 0.5);
+}
+
+.home-simple-line-icons {
+	width: 14.7px;
+	height: 15px;
+	font-family: simple-line-icons;
+	font-size: $font-size__icon-regular;
+	color: $brand-pure-white;
+}
+
+.side-menu-footer-icons  {
+	@extend %main-background;
+	padding-left: 0;
+}
+
+.side-menu-footer-icons div {
+	height: 40px;
+	width: 48px;
+	text-align: center;
+	position: fixed;
+}
+
+.side-menu-footer-icons div.contact {
+	bottom: 48px;
+}
+
+.side-menu-footer-icons div a {
+	color: black;
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+.first-section-column {
+	max-width: 186px;
+}
+
+.due-in {
+	width: 43px;
+	height: 18px;
+	font-size: 13px;
+	line-height: 1.38;
+	text-align: left;
+	color: $brand-slate-grey;
+}
+
+.days {
+	width: 52px;
+	height: 18px;
+	font-weight: $font-weight__bold;
+	color:$brand-black;
+	text-align: left;
+}
+
+.layer {
+	width: 97px;
+	height: 24px;
+	font-size: $font-size__xlarge;
+	font-weight: $font-weight__semi-bold;
+	color:$brand-black;
+	text-align: left;
+}
+
+.severity {
+	width: 56px;
+	height: 18px;
+	line-height: 1.38;
+	text-align: left;
+	color: $brand-slate-grey;
+}
+
+.supervisory-inspection {
+	width: 272px;
+	height: 27px;
+	font-size: $font-size__card-title;
+	text-align: left;
+}
+
+.ln-number {
+	width: 105px;
+	height: 18px;
+	font-weight: $font-weight__semi-bold;
+	line-height: 1.38;
+	text-align: left;
+}
+
+.service-type-education {
+	width: 155px;
+	height: 18px;
+	line-height: 1.38;
+	text-align: left;
+	color: $brand-slate-grey;
+}
+
+.service-type-education.text-style {
+	font-weight: $font-weight__semi-bold;
+}
+
+.start-inspection-div {
+	text-align: center;
+}
+
+.start-inspection-button {
+	width: 170px;
+	height: 35px;
+	background-color: $brand-ocean-blue-two;
+	border: none;
+	font-weight: $font-weight__bold;
+	line-height: 1;
+	text-align: center;
+	color: $brand-pure-white;
+}
+
+.col-divider-icon {
+	padding: 0 5px;
+}
+
+.school {
+	font-size: $font-size__large;
+	font-weight: $font-weight__semi-bold;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.address,
+.contact-number-label {
+	line-height: 1.38;
+	text-align: left;
+	color: $brand-brownish-grey;
+}
+
+.address-details,
+.contact-number-text {
+	font-weight: $font-weight__semi-bold;
+	line-height: 1.38;
+	text-align: left;
+}
+
+.div-sperator {
+	width: 110px;
+	height: 6px;
+	background-color: $brand-mustard;
+	margin-bottom: 5px;
+}
+
+.div-sperator-middle {
+    width: 409px;
+    border-bottom: 1px solid $brand-light-gray;
+}
+
+.level5 {
+	background-color: $brand-green;
+}
+
+.level4 {
+	background-color: $brand-mustard;
+}
+
+.level3 {
+	background-color: $brand-goldenrod;
+}
+
+.level2 {
+	background-color: $brand-orange;
+}
+
+.level1 {
+	background-color: $brand-red;
+}
+
+.padding-rows {
+	padding-top: 15px !important;
+	padding-left: 0;
+}
+
+.card-second-section {
+	min-width: 550px;
+	padding-right: 80px;
+}
+
+ion-popover-view.fit {
+	height: auto !important;
+	width: 188px;
+}
+
+ion-popover-view.fit ion-content {
+	position: relative !important;
+}
+
+.sort-menu .item {
+	border: solid 3px $brand-pure-white;
+}
+
+.tabs-left-align {
+	-webkit-justify-content: left !important;
+	justify-content: left !important;
+}
+
+.tabs-top > .tabs,
+.tabs.tabs-top {
+	-webkit-justify-content: left !important;
+	justify-content: left !important;
+	margin-top: 50px;
+}
+
+.tab-item {
+	font-family: $font-family__base;
+	overflow: visible;
+}
+
+.tab-item.tab-item-active,
+.tab-item.active,
+.tab-item.activated {
+	border-color: $brand-azure !important;
+	font-weight: $font-weight__semi-bold;
+}
+
+.tab-nav a:nth-last-child(3) {
+	margin-left: 450px;
+	border-bottom: none;
+	color: $brand-ocean-blue;
+}
+
+.next-three-months-tab {
+	margin-left: 15px;
+}
+
+.tab-nav a:nth-last-child(2) {
+	border-bottom: white;
+	color: $brand-ocean-blue;
+}
+
+.tab-nav a:nth-last-child(1) {
+	border-bottom: white;
+	color: $brand-ocean-blue;
+}
+
+.list .item.item-accordion {
+	line-height: 38px;
+	padding-top: 0;
+	padding-bottom: 0;
+	opacity: 1;
+	transition: 0.09s all ease-in-out;
+	padding-right: 16px;
+}
+
+.list .item.item-accordion.ng-hide {
+	opacity: 0;
+	line-height: 0;
+}
+
+.item-accordion-icon {
+	float: right;
+	color: $brand-azure;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+	display: block !important;
+}
+
+.item {
+	border-style: none;
+}
+
+.filter-card {
+	margin: 2px;
+	min-height: 50px;
+	padding-top: 16px !important;
+}
+
+.licencingAppModel {
+	width: 30%;
+	height: 90%;
+	top: 5%;
+	left: 35%;
+	right: 5%;
+	bottom: 5%;
+	background: $brand-white;
+}
+
+.modelCardItem {
+	margin: 0;
+	padding: 0;
+	margin-top: 2px;
+}
+
+.licencingModelHeader {
+	background: $background-color;
+}
+
+.licencingModeltitle {
+	right: 10% !important;
+	left: 0 !important;
+	font-size: $font-size__large !important;
+	font-weight: $font-weight__semi-bold !important;
+	text-align: inherit !important;
+}
+
+.tabs-left-align {
+	-webkit-justify-content: left !important;
+	justify-content: left !important;
+}
+
+.tabs-top > .tabs,
+.tabs.tabs-top {
+	-webkit-justify-content: left !important;
+	justify-content: left !important;
+	margin-top: 50px;
+}
+
+.tab-nav a:nth-last-child(1) {
+	border-bottom: white;
+	color: $brand-azure;
+}
+
+.list .item.item-accordion {
+	line-height: 38px;
+	padding-top: 0;
+	padding-bottom: 0;
+	opacity: 1;
+	transition: 0.09s all ease-in-out;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.list .item.item-accordion.ng-hide {
+	opacity: 0;
+	line-height: 0;
+}
+
+.item-accordion-icon {
+	float: right;
+	color: $brand-azure;
+}
+
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+	display: block !important;
+}
+
+.item {
+	border-style: none
+}
+
+.filter-card {
+	margin: 2px;
+	min-height: 50px;
+	padding-top: 16px !important;
+	box-shadow:  0 1px 2px rgba(0, 0, 0, 0.3)
+}
+
+.licencingAppModel {
+	width: 30%;
+	height: 90%;
+	top: 5%;
+	left: 35%;
+	right: 5%;
+	bottom: 5%;
+	background: $brand-white;
+}
+
+.modelCardItem {
+	margin: 0;
+	padding: 0;
+}
+
+.licencingModelHeader {
+	background: $brand-white;
+}
+
+.licencingModeltitle {
+	right: 10% !important;
+	left: 0 !important;
+}
+
+.contentBackground {
+	background: $background-color;
+}
+
+.licencingFilterModel {
+	width: 25%;
+	height: 100%;
+	top: 0;
+	left: 75%;
+	right: 0;
+	bottom: 5%;
+	background: $brand-white;
+}
+
+.contentBackground {
+	background: $brand-white-two;
+	margin-bottom: 20%;
+}
+
+.myTabStyle {
+    .tab-nav {
+		@extend %main-background;
+		border-bottom: 1px solid $brand-pure-white;
+        padding-left: 26px;
+        padding-right: 41px;
+        background: none;
+
+        a.provider-icon, a.filter-icon, a.sort-icon {
+            max-width: 180px;
+            text-align: right;
+			column-rule: $brand-ocean-blue;
+        }
+    }
+}
+
+.fixed-header {
+	/* The ionic header bar is 43px in height, put your content below the header bar. */
+	margin-top: 80%;
+}
+
+.contentBackground {
+	background: $brand-white-two;
+	margin-bottom: 0;
+}
+
+.providerListContent {
+	margin-top: 15%;
+}
+
+.providerSearchBar {
+	padding-top: 10%;
+	border-style: solid;
+	border: $brand-cornflower;
+	background: $brand-white;
+}
+
+.fixed-header {
+	margin-top: 80%;
+	/* The ionic header bar is 43px in height, put your content below the header bar. */
+}
+
+.hiddenNavBar {
+	background: $brand-mint;
+}
+
+.card.side-nav-card {
+	height: 100%;
+}
+
+.filter-result {
+	margin-top: 40px;
+}
+
+.providerFacility {
+	margin-top: 10%;
+}
+
+.filterButton {
+	min-width: 50% !important;
+}
+
+.start-inspection-button-close {
+	width: 170px;
+	height: 40px;
+	background-color: $brand-pure-white;
+	border: none;
+	font-weight: $font-weight__bold;
+	line-height: 1;
+	text-align: center;
+	color: $brand-ocean-blue-two;
+}
+
+.bar-footer {
+	background: $brand-ocean-blue-two;
+}
+
+.oec-span-padding-left {
+    padding-left: 5px;
+}
+
+.searchBar {
+    border-style: double;
+    border-color: $brand-azure;
+    margin-top: -2px;
+}
+
+.filter-group {
+	margin-bottom: 16px;
+}
+
+hr.style {
+	margin: 0px -20px 1px;
+    border-top: 1px solid $brand-light-gray;
+}
+
+.checkbox-position {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.checkbox-position .checkbox {
+    padding-left: 0;
+}
+
+.bar .title {
+    right: 70%
+}
+
+//Changes for Capacity
+
+.oec-classroom-form {
+    .row {
+        padding: 0;
+        &.row-center{
+            border-top: solid 1px $brand-light-gray;
+        }
+    }
+    
+}
+.classroom-border-bottom {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+.classroom-authorization-padding{
+    background-color: $brand-white;
+    span {
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 1.38;
+        margin: 0 35%;
+        color: $brand-black;
+    }
+}
+.classroom-border-left {
+    border-left: solid 1px $brand-light-gray;
+    padding: 0;
+}
+input[type="text"] {    
+    padding-left: 5px;
+    height: 28px;
+    
+}
+.oec-classroom-input{
+    width: 50px !important;
+    border: solid 1px $brand-light-gray !important; 
+    &.edited{
+        border: none !important;
+        padding-left: 0;
+    }
+}
+.item-input{
+    display: block !important;
+    font-family: $font-family__base;
+    font-size: 13px;
+}
+
+.item-input{
+    display: block !important;
+}
+
+.input-label {
+    max-width: 100% !important;
+    width: 100% !important;
+    font-family: OpenSans;
+    font-size: 13px;
+    line-height: 1.38;
+    text-align: left;
+    color: $brand-brownish-grey;
+    margin-bottom: 5px;
+}
+
+.item-select select {   
+    position: relative !important;
+    border: 1px solid $brand-black;
+    height: 28px;
+    font-family: OpenSans;
+    font-size: 13px;
+    line-height: 1.38;
+    background-color: $brand-white;
+    color: $brand-black;    
+    max-width: 100%!important;
+    width: 160px !important;
+    right: auto!important;
+    direction: ltr!important;
+    padding-left: 5px !important;
+    &.edited{
+        border: none !important;
+        padding-left: 0;
+    }
+}
+select.decorated option {
+    text-align: left;
+}
+
+.item-select:after {
+    top: 65% !important;
+    left: 40% !important;
+    border: none !important;
+    font-family: $font-family__anticons;
+    content: '\E61D';
+    color: #006fa7;
+}
+
+.item-floating-label {
+    span {
+        padding: 7px 10px 7px 0;
+    }
+}
+.card-div div.row.row-row-center{
+    padding: 0;
+}
+
+//Replace if the button with same format exists
+.oec-button {
+    width: 100px;
+   height: 35px;
+    border: solid 2px $brand-ocean-blue-two;
+    &.secondary {               
+        color: $brand-ocean-blue-two;
+        background-color: $brand-pure-white;
+    }
+    &.primary {
+        background-color: $brand-ocean-blue-two;        
+        color: $brand-pure-white;   
+        margin-left: 20px;
+    }
+}
+.oec-classroom-buttons {
+    position: relative;
+    left: 45%;
+    padding-top: 20px;
+}

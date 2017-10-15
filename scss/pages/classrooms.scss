@@ -1,0 +1,296 @@
+
+
+.Rectangle-5-Copy {
+  width: 650px;
+  height: fit-content;
+  opacity: 0.9;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin: 20px;
+  box-shadow: 0 0 4px 0 rgba(163, 163, 163, 0.5);
+    .row {
+      padding: 0;
+    }
+    .row.row-center {
+      border-top: solid 1px $brand-light-gray;
+    }
+	}
+.Total-Classroom{
+  width: 163px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+	}
+
+.New-button-borders {
+  width: 155px;
+  height: 35px;
+  border: solid 2px $brand-azure;
+}
+.New-button-New {
+  width: 150px;
+  height: 32px;
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: $brand-azure;
+	background: transparent;
+	border: none;
+	}
+.EDIT {
+  width: 30px;
+  height: 15px;
+  object-fit: contain;
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-align: center;
+  color: $brand-ocean-blue;
+  background: transparent;
+}
+.EDIT-icon {
+  width: 11.4px;
+  height: 11.4px;
+  background-color: #006fa7;
+}
+.Classroom-Name {
+  width: 128px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Classroom-Name-Text {
+  width: 272px;
+  height: 27px;
+  font-family: $font-family__base;
+  font-size: 20px;
+  text-align: left;
+  color: #333333;
+}
+.Classroom-Name-Text-Border {
+  width: 240px;
+  height: 30px;
+  border: solid 1px #333333;
+  }
+.Description {
+  width: 96px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Description-Text {
+  width: 590px;
+  height: 36px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+}
+.Capacity {
+  width: 58px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Capacity-content {
+  width: 53px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Session-type {
+  width: 171px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Session-type-text {
+  width: 109px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Line-1 {
+  width: 590px;
+  height: 2px;
+  border-top: solid 1px $brand-light-gray;
+}
+.Line-2 {
+  width: 2px;
+  height: 130px;
+  border-left:  solid 1px $brand-light-gray;
+}
+.Auth-to-serve-cell {
+  width: 368px;
+  height: 29px;
+  background-color: #f4f4f4;
+}
+.Authorized-to-serve {
+  width: 155px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+}
+.Youngest-Age {
+  width: 100px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Youngest-Age-text {
+  width: 139px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Youngest-Age-Type {
+  width: 139px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Youngest-Age-Type-content {
+  width: 161px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Oldest-Age {
+  width: 100px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Oldest-Age-content {
+	width: 139px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Oldest-Age-Type {
+  width: 139px;
+  height: 18px;
+  font-family: $font-family__base;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #5a5a5a;
+}
+.Oldest-Age-Type-content {
+  width: 161px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  color: #333333;
+}
+.Badges {
+  width: 22px;
+  height: 15px;
+  background-color: #0098e5;
+}
+.Badges-content {
+  width: 12px;
+  height: 10px;
+  font-family: OpenSans;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  color: $brand-pure-white;
+}
+.All {
+  width: 16px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+
+}
+.Infant {
+  width: 38px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+}
+.Toddler {
+  width: 48px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+}
+.Pre-School {
+  width: 67px;
+  height: 18px;
+  font-family: OpenSans;
+  font-size: 13px;
+  line-height: 1.38;
+  text-align: left;
+  color: #333333;
+}
+.description {
+  margin-bottom: 10px;
+  textarea {
+    width: 590px;
+    height: 46px;
+    border: solid 1px $brand-black;
+  }
+
+}

@@ -1,0 +1,147 @@
+<ion-view title="Home" hide-nav-bar="true" class="dashboard">
+    <ion-nav-buttons side="right">
+        <mc-sync-spinner></mc-sync-spinner>
+    </ion-nav-buttons>
+    <div class="dashboard__title">
+      My Inspection
+    </div>
+
+    <ion-tabs class="tabs-striped tabs-top tabs-icon-left myTabStyle">
+        <ion-tab title="Today ({{(vm.inspections | filter:todayAndOverdue).length}})" href="#">
+            <ion-nav-view name="currentDash-tab">
+                <ion-content class="dashboard__layout">
+                    <div class="card-div" ng-repeat="inspectionRecord in vm.inspections | filter:todayAndOverdue">
+                        <!--First Section of Card-->
+                        <div class="row">
+                            <div class="col first-section-column">
+                                <div class="row padding-rows">
+                                    <p><span class="due-in" ng-hide="inspectionRecord.dateOrder  < 0"> DUE IN</span> <span class="days" ng-bind="inspectionRecord.dueDate"></span>
+                                        <br>
+                                        <span class="layer" ng-bind="inspectionRecord.Licensing_Due_Date__c | date:'MM/dd/yyyy'"></span>
+                                    </p>
+                                </div>
+                                <div class="row div-sperator" 
+                                  ng-class="{'level5':inspectionRecord.OEC_InitialSeverityNumber__c==5,
+                                  'level4':inspectionRecord.OEC_InitialSeverityNumber__c==4,
+                                  'level3':inspectionRecord.OEC_InitialSeverityNumber__c==3,
+                                  'level2':inspectionRecord.OEC_InitialSeverityNumber__c==2,
+                                  'level1':inspectionRecord.OEC_InitialSeverityNumber__c==1}" 
+                                  ng-show="inspectionRecord.showSeverity">
+                                </div>
+                                <div class="row padding-rows" ng-show="inspectionRecord.showSeverity">
+                                    <p><span class="severity">SEVERITY</span>
+                                        <br>
+                                        <span class="layer" ng-bind="inspectionRecord.OEC_InitialSeverityNumber__c"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <!--Second Section of Card-->
+                            <div class="col card-second-section">
+                                <div class="row padding-rows">
+                                    <p>
+                                        <span>LN: </span><span ng-bind="inspectionRecord.accountInformation[0].License_Number__c"></span><span class="col-divider-icon">|</span><span class="service-type-education">Service Type: </span><span class="service-type-education text-style" ng-bind="inspectionRecord.accountInformation[0].Service_Type__c"> </span>
+                                        <br>
+                                        <span class="supervisory-inspection" ng-bind="inspectionRecord.Type_of_Case__c"></span>
+                                    </p>
+                                </div>
+                                <div class="row div-sperator-middle">
+
+                                </div>
+                                <div class="row padding-rows">
+                                    <p><span class="school" ng-bind="inspectionRecord.accountInformation[0].Facility_Name__c">Felton Public School</span>
+                                        <br>
+                                        <span class="address">Address:</span><span class="address-details oec-span-padding-left" ng-bind="inspectionRecord.address"></span><span class="contact-number-label oec-span-padding-left">Contact:</span><span class="contact-number-text oec-span-padding-left" ng-bind="inspectionRecord.accountInformation[0].Phone_Program_Site_Phone__c"></span>
+                                        <br>
+                                    </p>
+                                </div>
+                                <div class="simple-line-icons eye row" ng-click="openProvider(inspectionRecord.accountInformation[0].License_Number__c)">
+                                    <a>
+                                        <span class="address-details"> View Provider Details</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col col-center start-inspection-div">
+                                <button class="start-inspection-button" ng-click="startInspection(inspectionRecord)">START INSPECTION</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </ion-content>
+            </ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Next 3 Months ({{(vm.inspections | next3Month).length}})" class="next-three-months-tab" href="#/app/tabs/nextDash">
+            <ion-nav-view name="nextDash-tab">
+                <ion-content class="dashboard__layout">
+                    <div class="card-div" ng-repeat="inspectionRecord in vm.inspections | next3Month">
+                        <!--First Section of Card-->
+                        <div class="row">
+                            <div class="col first-section-column">
+                                <div class="row padding-rows">
+                                    <p><span class="due-in" ng-hide="inspectionRecord.dueDate.indexOf('OVERDUE') != -1"> DUE IN</span> <span class="days" ng-bind="inspectionRecord.dueDate"></span>
+                                        <br>
+                                        <span class="layer" ng-bind="inspectionRecord.Licensing_Due_Date__c | date:'MM/dd/yyyy'"></span>
+                                    </p>
+                                </div>
+                                <div class="row div-sperator" 
+                                  ng-class="{'level5':inspectionRecord.OEC_InitialSeverityNumber__c==5,
+                                  'level4':inspectionRecord.OEC_InitialSeverityNumber__c==4,
+                                  'level3':inspectionRecord.OEC_InitialSeverityNumber__c==3,
+                                  'level2':inspectionRecord.OEC_InitialSeverityNumber__c==2,
+                                  'level1':inspectionRecord.OEC_InitialSeverityNumber__c==1}" 
+                                  ng-show="inspectionRecord.showSeverity">
+                                </div>
+                                <div class="row padding-rows"  ng-show="inspectionRecord.showSeverity">
+                                    <p><span class="severity">SEVERITY</span>
+                                        <br>
+                                        <span class="layer" ng-bind="inspectionRecord.OEC_InitialSeverityNumber__c"></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Second Section of Card-->
+                            <div class="col card-second-section">
+                                <div class="row padding-rows">
+                                    <p>
+                                        <span>LN: </span><span ng-bind="inspectionRecord.accountInformation[0].License_Number__c"></span><span class="col-divider-icon">|</span><span class="service-type-education">Service Type: </span><span class="service-type-education text-style" ng-bind="inspectionRecord.accountInformation[0].Service_Type__c"> </span>
+                                        <br>
+                                        <span class="supervisory-inspection" ng-bind="inspectionRecord.Type_of_Case__c"></span>
+                                    </p>
+                                </div>
+                                <div class="row div-sperator-middle">
+
+                                </div>
+                                <div class="row padding-rows">
+                                    <p><span class="school" ng-bind="inspectionRecord.accountInformation[0].Facility_Name__c">Felton Public School</span>
+                                        <br>
+                                         <span class="address">Address:</span><span class="address-details oec-span-padding-left" ng-bind="inspectionRecord.address"></span><span class="contact-number-label oec-span-padding-left">Contact:</span><span class="contact-number-text oec-span-padding-left" ng-bind="inspectionRecord.accountInformation[0].Phone_Program_Site_Phone__c"></span>
+                                        <br>
+                                    </p>
+                                </div>
+                                <div class="simple-line-icons eye row" ng-click="openProvider(inspectionRecord.accountInformation[0].License_Number__c)">
+                                    <a>
+                                        <span class="address-details  oec-span-padding-left"> View Provider Details </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col col-center start-inspection-div">
+                                <button class="start-inspection-button" ng-click="startInspection(inspectionRecord)">START INSPECTION</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </ion-content>
+
+            </ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="PROVIDER DIRECTORY" icon="simple-line-icons provider-icon" ng-click="openProviderDirectory($event)">
+        </ion-tab>
+        <ion-tab title="FILTER" icon="anticons filter-icon" ng-click="openFilter($event)">
+        </ion-tab>
+        <ion-tab title="SORT" icon="material-icons sort-icon" ng-click="openPopover($event)">
+        </ion-tab>
+
+    </ion-tabs>
+
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view title="Home" hide-nav-bar="true" class="oec-ion-view-header">
+	<ion-nav-buttons side="right">
+		<mc-sync-spinner></mc-sync-spinner>
+	</ion-nav-buttons>
+	<div class="my-providerSummary">
+	<div class="row">
+	<div class="col col-70">
+	<div class="row card-item">
+			<div class="col col-50">
+					<div class="row providerSummaryTitle">Provider:&nbsp;<div ng-bind="providerSummary.facilityName"></div></div>
+					<div class="row providerSummaryLabel">Address:&nbsp; <div class="providerSummaryLabelData" ng-bind="providerSummary.address"> </div></div>
+					<div class="row providerSummaryLabel">Contact:&nbsp; <div class="providerSummaryLabelData" ng-bind="providerSummary.phoneNumber"> </div></div>
+			</div>
+			<div class="col">
+					<div class="row providerSummaryLabelData providerSummaryLicence">
+							LN:&nbsp;<div class="providerSummaryLabelData" ng-bind="providerSummary.licenceNumber"></div>
+					</div>
+					<div class="row providerSummaryLabel">
+							Service Type:&nbsp;<div class="providerSummaryLabelData" ng-bind="providerSummary.serviceType"></div>
+					</div>
+					<div class="row providerSummaryLabel">
+							Last Contact Date:&nbsp;<div class="providerSummaryLabelData" ng-bind="providerSummary.lastContactDate"></div>
+					</div>
+			</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<ion-tabs class="tabs-striped tabs-top provider-summary-tab">
+			<ion-tab title="Inspections" >
+					<ion-nav-view name="inspections-tab" class="inspection-page">
+							<div ng-include="'templates/inspections.html'"></div>
+					</ion-nav-view> 
+			</ion-tab>
+			<ion-tab title="Classrooms" >
+				<ion-nav-view name="inspections-tab" class="inspection-page">
+						<div ng-include="'templates/providerSummary/capacity.html'"></div>
+				</ion-nav-view> 
+			</ion-tab>
+			<ion-tab title="Licensed Capacity">
+				 <ion-nav-view name="licensed-tab" class="inspection-page">
+								<div ng-include="'templates/providerSummary/capacity.html'"></div>
+				</ion-nav-view> 
+			</ion-tab>
+			<ion-tab title="Conditions">
+			</ion-tab>
+		   
+	</ion-tabs>
+	</ion-view>

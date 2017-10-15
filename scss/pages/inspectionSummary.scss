@@ -1,0 +1,79 @@
+.inspection-summary {
+
+	&__title {
+		display: block;
+		font-size: $font-size__header-title;
+		font-weight: $font-weight__light;
+		height: auto; // Override Ionic
+		padding: 15px 20px 15px 100px;
+		z-index: $z__header;
+
+		&_end {
+			font-weight: $font-weight__bold;
+			padding-left: 10px;
+		}
+
+		& div:nth-child(2) {
+			margin-top: 15px;
+		}
+	}
+
+	&__arrow-icon {
+		font-size: $font-size__icon-small;
+		left: 5px;
+		position: relative;
+		top: -2px;
+	}
+
+	&__subtitle {
+		font-size: $font-size__header-title-small;
+		margin-top: 5px;
+	}
+
+	&__header-right {
+		float: right;
+		position: relative;
+		top: 35px;
+		z-index: $z__header;
+
+		& span:nth-child(2) {
+			margin-left: 70px;
+		}
+	}
+
+	&__header-icon {
+		color: $positive;
+		font-size: $font-size__icon-xlarge;
+	}
+
+	&__header-icon-text {
+		color: $positive;
+		font-size: $font-size__header-title-small;
+		font-weight: $font-weight__bold;
+		position: relative;
+		right: 43px;
+		top: 20px;
+	}
+
+	&__roi-button {
+		margin-left: 60px;
+		margin-right: 25px;
+
+		&_text {
+			bottom: 2px;
+			font-size: $font-size__normal;
+			font-weight: $font-weight__bold;
+			padding-left: 10px;
+			position: relative;
+		}
+	}
+
+	&__search-bar {
+		width: 90%;
+	}
+
+	&__content {
+		@extend %page-content;
+	}
+
+}

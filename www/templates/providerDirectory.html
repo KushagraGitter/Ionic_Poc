@@ -1,0 +1,24 @@
+<ion-modal-view class="licencingAppModel">
+    <ion-header-bar class="licencingModelHeader">
+        <h1 class="title licencingModeltitle">SEARCH FOR A PROVIDER/FACILITY</h1>
+        <div class="button button-clear" ng-click="closeProviderModel()"><span class="icon ion-android-close"></span></div>
+    </ion-header-bar>
+    <div class="list list-inset providerSearchBar">
+        <label class="item item-input item-icon-right searchBar">
+            <i class="icon ion-ios-search placeholder-icon"></i>
+            <input type="text" placeholder="Search" ng-model='Facilityname' ng-keypress="searchProvider($event)">
+        </label>
+      
+    </div>
+    <label class="providerSearchLabel" ng-if="Facilityname">Showong results for "{{Facilityname}}"</label>
+    <ion-content class="contentBackground providerListContent">
+        <ion-list ng-repeat="provider in vm.tempInspections | filter:Facilityname">
+            <ion-item class='card modelCardItem filter-card' ng-click="openProvider(provider.accountInformation[0].License_Number__c)">
+                <div class="item item-text-wrap provider-list-item" ng-init="Facilityname = provider.accountInformation[0].Facility_Name__c">
+                    <p>LN: {{provider.accountInformation[0].License_Number__c}}</p>
+                    <p>{{Facilityname}}</p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+  </ion-modal-view>

@@ -1,0 +1,48 @@
+.dashboard {
+	@extend %main-background;
+
+	&__title {
+		font-size: $font-size__header-title;
+		font-weight: $font-weight__light;
+		height: 30px;
+		line-height: 1;
+		margin-top: 15px;
+		object-fit: contain;
+		padding-left: 45px;
+		text-align: left;
+		width: 100%;
+	}
+
+	&__layout {
+		@extend %page-content;
+	}
+
+	& .tab-item {
+		.simple-line-icons.provider-icon,
+		.anticons.filter-icon,
+		.material-icons.sort-icon {
+
+			&:before {
+				font-size: $font-size__icon-regular;
+				padding-right: 10px;
+				position: relative;
+				top: -5px;
+			}
+
+			& + span {
+				font-size: $font-size__normal;
+			}
+		}
+	}
+
+	& .eye {
+		& a {
+			text-decoration: none;
+		}
+
+		&:before,
+		& span {
+			color: $brand-ocean-blue;
+		}
+	}
+}

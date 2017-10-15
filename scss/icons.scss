@@ -1,0 +1,64 @@
+/***** Do not add any extra styles here!!  Move them into your page's stylesheet instead *****/
+
+.simple-line-icons {
+	display: inline-block;
+	font-family: $font-family__simple-line-icons;
+
+	&.home:before {
+		content: '\E069';
+	}
+
+	&.directory:before {
+		content: '\E034';
+	}
+
+	&.contact:before {
+		content: '\E005';
+	}
+
+	&.settings:before {
+		content: '\E09A';
+	}
+
+	&.eye:before {
+		content: '\E087';
+	}
+
+	&.provider-icon:before {
+		content: '\E034';
+	}
+}
+
+.anticons {
+	display: inline-block;
+	font-family: $font-family__anticons;
+
+	&.triangle-arrow-right:before {
+		content: '\E604';
+	}
+
+	&.filter-icon:before {
+		content: '\E663';
+	}
+}
+
+.material-icons {
+	display: inline-block;
+	font-family: $font-family__material-icons;
+
+	&.page-right:before {
+		content: '\E95B';
+	}
+
+	&.greek-building:before {
+		content: '\E807';
+	}
+
+	&.checkmark:before {
+		content: '\E8F6';
+	}
+
+	&.sort-icon:before {
+		content: '\EB0A';
+	}
+}

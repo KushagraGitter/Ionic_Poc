@@ -1,0 +1,41 @@
+$device-width : 1440px;
+$device-height: 1024px;
+
+$default-edge-padding: 16px;
+
+$font-family__base             : "OpenSans";
+$font-family__material-icons   : "MaterialIcons";
+$font-family__anticons         : "Anticons";
+$font-family__simple-line-icons: "SimpleLineIcons";
+
+$font-weight__light     : 300;
+$font-weight__regular   : 400;
+$font-weight__semi-bold : 600;
+$font-weight__bold      : 700;
+$font-weight__extra-bold: 800;
+
+$font-size__normal : 13px;
+$font-size__large  : 15px;
+$font-size__xlarge : 18px;
+
+$font-size__card-title: 20px;
+
+$font-size__icon-small  : 1rem;
+$font-size__icon-regular: 15px;
+$font-size__icon-large  : 20px;
+$font-size__icon-xlarge : 25px;
+
+$font-size__header-title      : 25px;
+$font-size__header-title-small: 13px;
+
+// z-index - generic
+$z__hide       : -1;
+$z__reset      : auto;
+$z__low        : 1;
+$z__medium     : 2;
+$z__high       : 3;
+$z__higher     : 4;
+$z__header     : 10;
+$z__below-modal: 11;
+$z__modal      : 99;
+$z__above-all  : 100;

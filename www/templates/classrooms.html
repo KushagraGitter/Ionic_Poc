@@ -1,0 +1,175 @@
+<ion-content class="dashboard-layout providerSummary-inspection-layout">
+              <div class="row ">
+              <div class="Total-Classroom">
+                       Total Classroom Capacity
+              </div>
+            </div>
+              <div class="row">
+					           <div class="col All">All<span class="Badges"><span class="Badges-content">26</span></span></div>
+					           <div class="col Infant">Infants<span class="Badges"><span class="Badges-content">8</span></span></div>
+					           <div class="col Toddler">Toddlers<span class="Badges"><span class="Badges-content">15</span></span></div>
+					           <div class="col Pre-School">Pre-School<span class="Badges"><span class="Badges-content">15</span></span></div>
+					           <div class="col-60% New-button-borders"><button class="New-button-New" ion-button>New Classroom<ion-icon name="Add"></ion-icon></button></div>
+              </div>
+              <!-- <div class="row">
+                <div class="Rectangle-5-Copy">
+                  <div>
+                     <button class="Edit" ion-button><ion-icon name="edit-icon" class="anticons edit-icon"></ion-icon>EDIT<ion-icon name="Edit"></ion-icon></button>
+                  </div>
+                  <div>
+                      <span class="Classroom-Name">Classroom Name</span>
+                      <br>
+                      <input type="text" class="Classroom-Name-Text Classroom-Name-Text-Border" >
+                      <br>
+                      <span class="Description">Description</span>
+                      <input type="text" class="Description-Text" placeholder="ABCDEFG" ng-model="youngestAge">
+                 </div>
+                 <div class="row Line-1">
+                      <div class="col col-40">
+                          <span class="Capacity">Capacity</span>
+                          <br>
+                          <input type="text" class="Capacity-content" placeholder="Youngest Age" ng-model="youngestAge">
+                          <br>
+                          <span class="Session-type">Classroom/Session Type</span>
+                          <input type="text" class="Session-type-text" placeholder="ABCDEFG" ng-model="youngestAge">
+                      </div>
+                      <div class="col col-75 Line-2">
+                          <div class="row Auth-to-serve-cell"><span class="Authorized-to-serve">Authorized to Serve</span></div>
+                           <div class="row">
+                              <div class="col">
+                                  <div class="list">
+                                      <label class="item item-input item-floating-label">
+                                          <span class="Youngest-Age">Youngest Age</span>
+                                          <input type="text" class="Youngest-Age-text" placeholder="Youngest Age" ng-model="youngestAge">
+                                      </label>
+                                      <label class="item item-input item-floating-label">
+                                          <span class="Oldest-Age">Oldest Age</span>
+                                          <input type="text" class="Oldest-Age-content" placeholder="Oldest Age" ng-model="oldestAge">
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <div class="list">
+                                      <label class="Youngest-Age-Type">
+                                        Youngest Age Type
+                                         <br>
+                                          <select class="Youngest-Age-Type-content">
+                                          <option>Weeks</option>
+                                          <option selected>Months</option>
+                                          <option>Years</option>
+                                          </select>
+                                      </label>
+                                      <br>
+                                      <label class="Oldest-Age-Type">
+                                          Oldest Age Type
+                                          <br>
+                                          <select class="Oldest-Age-Type-content">
+                                          <option>Weeks</option>
+                                          <option selected>Months</option>
+                                          <option>Years</option>
+                                          </select>
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="row">
+                             <button ion-button ng-click="cancleFilter()" class="filterButton start-inspection-button-close ">CANCEL</button>
+                             <button ion-button ng-click="applyFilter()" class="filterButton start-inspection-button">DONE</button>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div> -->
+               <div class="row">
+                   <div class="Rectangle-5-Copy">
+                        <div class="row">
+                          <div class="list classroom-border-bottom">
+                              <label class="item item-input item-stacked-label">
+                                      <span class="input-label">Capacity</span>
+                                      <input type="text" class="oec-classroom-input" placeholder="CapacityName" ng-bind="HOME">
+                              </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="description">
+                              <label class="item item-input item-stacked-label">
+                                      <span class="input-label">Description</span>
+                                      <textarea name="comment" ng-model="youngestAge">
+                                        Hello FO
+	                                    </textarea>
+                              </label>
+                          </div>
+                        </div>
+
+                        <div class="row row-center">
+                          <div class="col col-33">
+                               <div class="row">
+                                      <div class="list">
+                                          <label class="item item-input item-stacked-label">
+                                              <span class="input-label">Capacity</span>
+                                              <input type="text" class="oec-classroom-input" placeholder="" ng-model="youngestAge">
+                                          </label>
+                                          <label class="item item-input item-select">
+                                              <div class="input-label">
+                                              Capacity Type
+                                              </div>
+                                              <select class="decorated">
+                                              <option>Weeks</option>
+                                              <option selected>Months</option>
+                                              <option>Years</option>
+                                              </select>
+                                          </label>
+                                      </div>
+                               </div>
+                          </div>
+
+                            <div class="col col-67 classroom-border-left">
+                                <div class="row classroom-authorization-padding"><span>Authorized to Serve</span></div>
+                                 <div class="row">
+                                    <div class="col">
+                                        <div class="list">
+                                            <label class="item item-input item-stacked-label">
+                                                <span class="input-label">Youngest Age</span>
+                                                <input type="text" class="oec-classroom-input" placeholder="" ng-model="youngestAge">
+                                            </label>
+                                            <label class="item item-input item-stacked-label">
+                                                <span class="input-label">Oldest Age</span>
+                                                <input type="text" class="oec-classroom-input" placeholder="" ng-model="oldestAge">
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="list">
+                                            <label class="item item-input item-select">
+                                                <div class="input-label">
+                                                Youngest Age Type
+                                                </div>
+                                                <select class="decorated">
+                                                <option>Weeks</option>
+                                                <option selected>Months</option>
+                                                <option>Years</option>
+                                                </select>
+                                            </label>
+                                             <label class="item item-input item-select">
+                                                <div class="input-label">
+                                                Oldest Age Type
+                                                </div>
+                                                <select class="decorated">
+                                                <option>Weeks</option>
+                                                <option selected>Months</option>
+                                                <option>Years</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="row oec-classroom-buttons">
+                                    <button ion-button ng-click="cancleFilter()" class="oec-button secondary">CANCEL</button>
+                                    <button ion-button ng-click="applyFilter()" class="oec-button primary">DONE</button>
+                                </div>
+                            </div>
+                        </div>
+</div>
+</div>
+            </ion-content>

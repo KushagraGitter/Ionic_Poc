@@ -1,0 +1,35 @@
+<ion-modal-view class="licencingFilterModel" ng-class="{'ng-leave':!clsOpneFilter}">
+  <ion-header-bar class="bar-light left">
+    <h1 class="title">Filter By</h1>
+  </ion-header-bar>
+  
+<ion-content class="contentBackground">
+    <ion-list>
+        <div ng-repeat="group in groups">
+          <ion-item class="item-light card filter-card"
+                   >
+             <div class="filter-group">
+                 {{group.name}}
+                <i class="icon item-accordion-icon"  ng-click="toggleGroup($event,group)" ng-class="{'ion-chevron-right': !isGroupShown(group), 'ion-chevron-down': isGroupShown(group)}"></i>
+             </div>
+              <hr class="style" ng-show="isGroupShown(group)">
+                <ion-item class="item-accordion"
+                ng-repeat="item in group.items"
+                ng-show="isGroupShown(group)"
+               >  
+        <ion-checkbox class="checkbox-positive checkbox-position" ng-model="item.checked" ng-change="item-checked" >{{item.name}}</ion-checkbox>
+    </ion-item>
+            </ion-item>
+        </div>
+      </ion-list>
+  </ion-content>
+  <div class="bar bar-footer">
+      <button ion-button ng-click="cancleFilter()" class="filterButton start-inspection-button-close ">CANCEL</button>
+      <button ion-button ng-click="applyFilter()" class="filterButton start-inspection-button">APPLY</button>
+    </div>
+</ion-modal-view>
+       
+      
+       
+  
+      

@@ -1,0 +1,56 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+	<ion-side-menu-content>
+		<ion-nav-bar class="bar-positive">
+			<ion-nav-back-button>
+			</ion-nav-back-button>
+
+			<ion-nav-buttons side="left">
+				<!--<button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+			  </button>-->
+			</ion-nav-buttons>
+		</ion-nav-bar>
+
+		<ion-nav-view name="menuContent"></ion-nav-view>
+	</ion-side-menu-content>
+
+	<ion-side-menu side="left" expose-aside-when="large" side="left" width="48">
+		<ion-content>
+			<ul class="list side-menu-class">
+				<!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
+				<div>
+					<a menu-close href="#/app/dashboard">
+						<span class="simple-line-icons home"></span>
+					</a>
+				</div>
+
+				<div>
+					<a menu-close href="#/app/provider-details">
+						<span class="simple-line-icons directory"></span>
+					</a>
+				</div>
+
+				<div>
+					<a menu-close href="#/app/settings">
+						<span class="simple-line-icons contact"></span>
+					</a>
+				</div>
+
+				<div>
+					<a menu-close href="#/app/settings">
+						<span class="simple-line-icons settings"></span>
+					</a>
+				</div>
+			</ul>
+		</ion-content>
+		<ion-footer-bar class="side-menu-footer-icons">
+			<div>
+				<a href="#" ng-click="showConfirmLogout()">
+					<span class="simple-line-icons contact"></span>
+				</a>
+			</div>
+			 
+		</ion-footer-bar>
+		 
+	</ion-side-menu>
+</ion-side-menus>

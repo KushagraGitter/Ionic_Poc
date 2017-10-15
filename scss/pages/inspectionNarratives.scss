@@ -1,0 +1,15 @@
+.inspection-narratives {
+	$narrative-height: 700px;
+
+	background: $brand-white;
+	height: 90%;
+	left: calc(#{$device-width} - #{$narrative-height} - #{$default-edge-padding});
+	position: absolute;
+	top: 15px;
+	width: $narrative-height;
+
+	&__header {
+
+	}
+
+}

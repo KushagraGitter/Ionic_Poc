@@ -22,3 +22,29 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+
+    $stateProvider
+      .state('app.dashboard',{
+          url:'/dashboard', 
+           
+                templateUrl :'/templates/dashboard.html',
+                contoller:'appCtrl'
+            
+          
+      }) 
+
+      .state('app.providerSummary',{
+              url:'/providerSummary',
+              templateUrl :'/templates/providerSummary.html',
+              contoller:'appCtrl'
+    }) 
+
+    $urlRouterProvider.otherwise('/app/providerSummary');
+}])
+
+.controller('appCtrl',['$scope', function($scope){
+  console.log('entered into app')
+}])
+

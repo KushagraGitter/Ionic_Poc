@@ -1,0 +1,109 @@
+<ion-content class="dashboard-layout providerSummary-inspection-layout">
+        <div class="list col">
+        <span class="item item-divider list-header providerSummaryLabelData">
+                Ongoing Inspections <span class="badges">1</span>
+        </span>
+        <div class="row item card-div ongoing-card">
+                <div class=" col first-section-column">
+                <div class="row padding-rows">
+                        <p><span class="due-in">DUE IN</span> <span class="days" >2 DAYS</span>
+                                <br>
+                        <span class="layer">10/12/2017</span>
+                        </p>
+                </div>
+                </div>
+                <div class=" col card-second">
+                <div class="row padding-rows">
+                        <p>
+                        <span class="providerSummaryLabelData">LN: 001992883</span><span class="col-divider-icon">
+                        <br>
+                        <span class="supervisory-inspection">Supervisory Inspection</span>
+                        </p>
+                </div>
+        
+        </div>
+        <div class="col col-center start-inspection-div inspection-button">
+                <button class="start-inspection-button ">CONTINUE</button>
+        </div>
+        </div>
+        </div>
+        <div class="list col" >
+                <span class="item item-divider list-header providerSummaryLabelData" ng-if="(inspectionsRecords).length >0 ">
+                      Pending Inspections <span class="badges">{{(inspectionsRecords).length}}</span>
+                </span>
+                <div class="row item card-div completed-card" ng-repeat="inspectionRecord in inspectionsRecords">
+                        <div class=" col first-section-column" >
+                        <div class="row padding-rows">
+                                <p><span class="due-in">DUE IN</span> <span class="days" ng-bind="inspectionRecord.Licensing_Due_Date__c | dayDiff"></span>
+                                        <br>
+                                        <span class="layer" ng-bind="inspectionRecord.Licensing_Due_Date__c | date:'MM/dd/yyyy'"></span>
+                                </p>
+                        </div>
+                        <div class="row div-sperator" 
+                        ng-class="{'level5':inspectionRecord.OEC_InitialSeverityNumber__c==5,
+                        'level4':inspectionRecord.OEC_InitialSeverityNumber__c==4,
+                        'level3':inspectionRecord.OEC_InitialSeverityNumber__c==3,
+                        'level2':inspectionRecord.OEC_InitialSeverityNumber__c==2,
+                        'level1':inspectionRecord.OEC_InitialSeverityNumber__c==1}" 
+                        ng-hide="inspectionRecord.OEC_InitialSeverityNumber__c != ''">
+                      </div>
+                      <div class="row padding-rows" ng-hide="inspectionRecord.OEC_InitialSeverityNumber__c != ''">
+                          <p><span class="severity">SEVERITY</span>
+                              <br>
+                              <span class="layer" ng-hide="inspectionRecord.OEC_InitialSeverityNumber__c"></span>
+                          </p>
+                      </div>
+                        </div>
+                        <div class=" col card-second">
+                        <div class="row padding-rows">
+                        <p>
+                        <span class="providerSummaryLabelData">LN: </span><span class="providerSummaryLabelData" ng-bind="providerSummary.licenceNumber"><span class="col-divider-icon">|</span><span class="service-type-education">Service Type: </span><span></span class="service-type-education text-style" ng-bind="inspectionRecord.accountInformation[0].Service_Type__c"> </span>
+                        <br>
+                        <span class="supervisory-inspection" ng-bind="inspectionRecord.Type_of_Case__c"></span>
+                        </p>
+                        </div>
+                
+                </div>
+                <div class="col col-center start-inspection-div">
+                        <button class="start-inspection-button">START</button>
+                </div>
+                </div>
+                </div>
+
+                <div class="list col col" >
+                        <div class="item item-divider list-header providerSummaryLabelData" ng-if="completedInspections.length > 0">
+                                Completed Inspections <span class="badges">{{completedInspections.length}}</span>
+                        </div>
+                        <div class="row item card-div completed-card" ng-repeat="completedinspection in completedInspections">
+                                <div class=" col first-section-column" >
+                                        <div class="row padding-rows">
+                                                <p>
+                                                <span class="providerSummaryLabelData">LN: </span><span class="providerSummaryLabelData" ng-bind="providerSummary.licenceNumber"><span class="col-divider-icon">|</span><span class="service-type-education">Service Type: </span><span></span class="service-type-education text-style" ng-bind="completedinspection.accountInformation[0].Service_Type__c"> </span>
+                                                <br>
+                                                <span class="supervisory-inspection" ng-bind="completedinspection.Type_of_Case__c"></span>
+                                                </p>
+                                        </div>
+                                        <div class="row div-sperator-middle">
+                                        </div>
+                                        <div class="row padding-rows">
+                                                <p>
+                                                <span>Clerance Date: </span><span class="providerSummaryLabelData"  ng-bind="completedinspection.OEC_ClearanceDate__c | date:'MM/dd/yyyy'"></span>
+                                                <br>
+                                                <span>Contact Type: </span>
+                                                <br>
+                                                <span>Contact Date: </span><span class="providerSummaryLabelData" ng-bind="completedinspection.OEC_ContactDate__c | date:'MM/dd/yyyy'"></span>
+                                                </p>
+                                        </div>              
+                                                               
+                                </div>
+                                <div class="col col-40">
+
+                                </div>
+                                <div class="col col-center start-inspection-div">
+                                        <button class="start-inspection-button completed-button">VIEW DETAILS</button>
+                                </div>
+                                </div>
+                        </div>
+
+                </div>
+        </ion-content>

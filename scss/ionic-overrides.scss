@@ -1,0 +1,21 @@
+$primary: $brand-pure-white !default;
+$positive: $brand-azure !default;
+$dark: $brand-black;
+
+$item-divider-bg: $brand-light-green;
+$list-header-color: $brand-light-green;
+$button-light-border: $brand-white-two;
+$background-color: $brand-white-two;
+
+ion-nav-view,
+ion-view {
+	background-color: $brand-pure-white !important;
+}
+
+ion-side-menu {
+    opacity: 0.6;
+}
+
+.positive {
+	color: $positive !important;
+}
